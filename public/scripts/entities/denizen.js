@@ -1,7 +1,7 @@
 class Denizen {
 
   constructor(options) {
-    // console.log("constructing:", this.constructor.name, options);
+    console.log("constructing:", this.constructor.name, options);
     this.lastTime = new Date();
     this.height = options.height || 60;
     this.width = options.width || 60;
@@ -33,6 +33,8 @@ class Denizen {
         this.updateOneTick();
       }
     }
+
+
   }
 
   updateOneTick() {
