@@ -25,7 +25,7 @@ class Denizen {
   }
 
   update(t) {
-    // if you're out of bounds, despawn
+    // if you're out of bounds or if you are a tasty fish that is close to a Bite fish
     if (this.outOfBounds(this.tank.getBounds())) {
       this.kill();
     } else {
@@ -33,8 +33,6 @@ class Denizen {
         this.updateOneTick();
       }
     }
-
-
   }
 
   updateOneTick() {
@@ -59,7 +57,7 @@ class Denizen {
 
   kill(duration) {
     // duration can be undefined, no problem
-    // console.log("like tears, in rain.  time to die.", this);
+    console.log("like tears, in rain.  time to die.", this);
     this.tank.removeDenizen(this.id, duration);
   }
 
